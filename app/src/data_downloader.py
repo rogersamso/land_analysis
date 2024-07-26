@@ -8,7 +8,7 @@ from pystac_client import Client
 import planetary_computer
 import geopandas as gpd
 
-from src.logging_config import logger
+from .logging_config import logger
 
 
 class DataDownloader():

@@ -1,5 +1,6 @@
 import logging
 
+
 def setup_logging():
     logger = logging.getLogger('land_classifier')
     logger.setLevel(logging.INFO)

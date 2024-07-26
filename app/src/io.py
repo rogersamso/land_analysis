@@ -12,8 +12,8 @@ import rioxarray as rxr
 import geopandas as gpd
 import numpy as np
 
-from src.io_vector import FileReader
-from src.tools import add_word_to_filename
+from .io_vector import FileReader
+from .tools import add_word_to_filename
 
 
 # Abstract Base Class for Data Handlers

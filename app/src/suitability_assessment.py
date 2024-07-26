@@ -11,11 +11,11 @@ from rasterio.crs import CRS
 from shapely.geometry import box
 import xarray as xr
 
-from src.tools import add_word_to_filename
-from src.io_vector import FileReader
-from src.data_downloader import DataDownloader
-from src.io import DiskHandler
-from src.logging_config import logger
+from .tools import add_word_to_filename
+from .io_vector import FileReader
+from .data_downloader import DataDownloader
+from .io import DiskHandler
+from .logging_config import logger
 
 ArrayFunction = Callable[[npt.ArrayLike], npt.ArrayLike]
 

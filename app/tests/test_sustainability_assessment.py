@@ -1,12 +1,12 @@
 import pytest
 
 from .conftest import TESTS_DIR, TESTS_DATA_DIR
-from src.suitability_assessment import (Project,
+from ..src.suitability_assessment import (Project,
                                         Stats,
                                         CoverTypeConfig,
                                         HANDConfig,
                                         SlopeConfig)
-from src.data_downloader import DataDownloader
+from ..src.data_downloader import DataDownloader
 
 protected_path = TESTS_DATA_DIR.joinpath("protected_areas_ARG.geojson")
 borders_path = TESTS_DATA_DIR.joinpath("ARG.geojson")

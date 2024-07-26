@@ -2,12 +2,11 @@ import pytest
 from pathlib import Path
 from geopandas import GeoDataFrame
 
-# Import the necessary classes from your module
-from src.io_vector import (FileReader,
-                           GeoParquetHandler,
-                           ShapefileHandler,
-                           GeoJSONHandler,
-                           KMLHandler)
+from ..src.io_vector import (FileReader,
+                             GeoParquetHandler,
+                             ShapefileHandler,
+                             GeoJSONHandler,
+                             KMLHandler)
 
 
 from .conftest import TESTS_DIR, TESTS_DATA_DIR

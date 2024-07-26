@@ -10,7 +10,7 @@ from shapely.geometry import shape
 from typing import Union, Type
 from pathlib import Path
 
-from src.logging_config import logger
+from .logging_config import logger
 
 
 class GeoDataHandler(ABC):
