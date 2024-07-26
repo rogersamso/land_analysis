@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: ./app
+    container_name: app-container
+    volumes:
+      - ./app/src:/app/src # Mount all directories to avoid having to build for every code change
+      - ./app/tests:/app/tests
+      - ./output:/app/output
+      - ./input:/app/input # this is where all input files should be placed
+    environment:
+      - OUTPUT_DIR=/app/output  # Pass the output directory as an environment variable
+      - INPUT_DIR=/app/input  # Pass the output directory as an environment variable
+
+  jupyterlab:
+    build:
+      context: ./jupyter
+    container_name: jupyterlab-container
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./jupyter/notebooks:/app/notebooks
+      - ./app/src:/app/notebooks/src
+      - ./output:/app/output
+      - ./input:/app/input # this is where all input files should be placed
+    environment:
+      - OUTPUT_DIR=/app/output
+      - INPUT_DIR=/app/input
+
+volumes:
+  app-src:
+  app-tests:
+  app-output:
+  app-input:
+  jupyter-notebooks:
